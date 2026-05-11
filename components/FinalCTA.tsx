@@ -67,7 +67,7 @@ export default function FinalCTA() {
           >
             {[
               "Briefing em 5 minutos",
-              "Entrega em até 48h",
+              "Prazo ágil garantido",
               "Satisfação garantida",
             ].map((s) => (
               <li key={s} className="flex items-center gap-2">

@@ -114,7 +114,7 @@ export default function WhatIsSection() {
 
             <RevealOnScroll delay={0.1}>
               <p className="mt-6 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                A Numeratti recebe o seu briefing — pode ser um texto, uma ideia ou um roteiro — e entrega um vídeo completo produzido com as melhores ferramentas de IA do mercado. Em até 48 horas, você tem um criativo pronto para rodar.
+                A Numeratti recebe o seu briefing — pode ser um texto, uma ideia ou um roteiro — e entrega um vídeo completo produzido com as melhores ferramentas de IA do mercado. Em poucos dias, você tem um criativo profissional pronto para rodar.
               </p>
             </RevealOnScroll>
 

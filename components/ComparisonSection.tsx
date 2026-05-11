@@ -2,12 +2,12 @@
 import RevealOnScroll from "./ui/RevealOnScroll";
 
 const rows = [
-  { label: "Tempo de entrega",  before: "7 a 30 dias",         after: "Até 48 horas" },
-  { label: "Custo médio",       before: "R$ 2.000–R$ 8.000",   after: "A partir de R$ 297" },
-  { label: "Equipe necessária", before: "Diretor, câmera, ator", after: "Só você e um briefing" },
-  { label: "Revisões",          before: "Cara e demorada",       after: "Inclusa no plano" },
-  { label: "Escala",            before: "1 vídeo por vez",       after: "Múltiplos em paralelo" },
-  { label: "Disponibilidade",   before: "Dias úteis, horário comercial", after: "Peça a qualquer hora" },
+  { label: "Tempo de entrega",   before: "7 a 30 dias",              after: "" },
+  { label: "Custo médio",        before: "R$ 2.000–R$ 8.000",        after: "" },
+  { label: "Equipe necessária",  before: "Diretor, câmera, ator",    after: "Só você e um briefing" },
+  { label: "Revisões",           before: "Cara e demorada",           after: "Inclusa no plano" },
+  { label: "Escala",             before: "1 vídeo por vez",           after: "Múltiplos em paralelo" },
+  { label: "Disponibilidade",    before: "Dias úteis, horário comercial", after: "Peça a qualquer hora" },
 ];
 
 export default function ComparisonSection() {
@@ -53,25 +53,39 @@ export default function ComparisonSection() {
               </div>
             </div>
 
-            {/* Rows */}
             {rows.map((row, i) => (
               <div
                 key={row.label}
                 className="grid grid-cols-3 items-center px-6 py-4 text-sm transition-colors duration-200 hover:bg-white/[0.02]"
-                style={{
-                  borderBottom: i < rows.length - 1 ? "1px solid var(--border)" : "none",
-                }}
+                style={{ borderBottom: i < rows.length - 1 ? "1px solid var(--border)" : "none" }}
               >
                 <div className="font-medium" style={{ color: "var(--text)" }}>
                   {row.label}
                 </div>
+
                 <div className="text-center flex items-center justify-center gap-2" style={{ color: "#EF4444" }}>
                   <XIcon />
                   <span>{row.before}</span>
                 </div>
+
                 <div className="text-center flex items-center justify-center gap-2" style={{ color: "var(--accent-2)" }}>
-                  <CheckIcon />
-                  <span className="font-semibold">{row.after}</span>
+                  {row.after ? (
+                    <>
+                      <CheckIcon />
+                      <span className="font-semibold">{row.after}</span>
+                    </>
+                  ) : (
+                    <span
+                      className="px-3 py-1 rounded-full text-xs font-semibold"
+                      style={{
+                        background: "rgba(124,92,252,0.12)",
+                        color: "var(--accent)",
+                        border: "1px solid rgba(124,92,252,0.25)",
+                      }}
+                    >
+                      Consulte
+                    </span>
+                  )}
                 </div>
               </div>
             ))}

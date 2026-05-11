@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Logo size={38} />
             <p className="mt-5 text-sm leading-relaxed max-w-xs" style={{ color: "var(--text-muted)" }}>
-              Vídeos profissionais produzidos com Inteligência Artificial. Entregamos em até 48h, prontos para anúncios, redes sociais e landing pages.
+              Vídeos profissionais produzidos com Inteligência Artificial. Entregamos em prazo ágil, prontos para anúncios, redes sociais e landing pages.
             </p>
           </div>
 

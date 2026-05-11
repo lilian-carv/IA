@@ -55,7 +55,7 @@ export default function Hero() {
             >
               <span className="tag mb-8 inline-flex">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-2 animate-pulse" style={{ background: "var(--accent-2)" }} />
-                Vídeos com IA · Entrega em até 48h
+                Vídeos com IA · Entrega em prazo ágil
               </span>
             </motion.div>
 
@@ -71,7 +71,7 @@ export default function Hero() {
               <span className="grad-text">vendem.</span>
               <br />
               Prontos em{" "}
-              <span style={{ color: "var(--accent-2)" }}>48 horas.</span>
+              <span style={{ color: "var(--accent-2)" }}>dias, não semanas.</span>
             </motion.h1>
 
             <motion.p
@@ -200,7 +200,7 @@ function VideoFrame() {
         }}
       >
         <span className="text-base">⚡</span>
-        Entregue em 48h
+        Entrega ágil
       </motion.div>
     </div>
   );
