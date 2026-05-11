@@ -1,48 +1,78 @@
 "use client";
-import { motion } from "framer-motion";
 import GlowButton from "./ui/GlowButton";
 import Particles from "./ui/Particles";
 import RevealOnScroll from "./ui/RevealOnScroll";
 
 export default function FinalCTA() {
   return (
-    <section className="relative bg-premium-dark noise py-32 md:py-44 overflow-hidden">
-      <div className="grid-bg absolute inset-0 opacity-60" />
-      <Particles count={20} />
-      <div className="orb w-[700px] h-[700px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" aria-hidden>
-        <div
-          className="w-full h-full rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(232,116,12,0.32), transparent 60%)" }}
-        />
-      </div>
+    <section
+      id="cta-final"
+      className="relative py-36 md:py-48 overflow-hidden"
+      style={{ background: "radial-gradient(ellipse at 50% 0%, #0D0B1A 0%, #040406 70%)" }}
+    >
+      <div className="dot-grid absolute inset-0" aria-hidden />
+      <Particles count={16} />
 
-      <div className="relative max-w-5xl mx-auto px-6 lg:px-10 text-center">
+      {/* Central glow */}
+      <div
+        className="orb w-[800px] h-[800px] left-1/2 top-1/2"
+        style={{
+          transform: "translate(-50%, -50%)",
+          background: "radial-gradient(circle, rgba(124,92,252,0.18), rgba(34,211,238,0.08) 50%, transparent 70%)",
+        }}
+        aria-hidden
+      />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-10 text-center">
+        <RevealOnScroll delay={0.05}>
+          <span className="tag mb-8 inline-flex">
+            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--accent-2)" }} />
+            Comece hoje
+          </span>
+        </RevealOnScroll>
+
         <RevealOnScroll delay={0.1}>
-          <h2 className="display display-tight text-white text-4xl md:text-6xl lg:text-7xl leading-[0.98]">
-            Cada dia sem diagnóstico é um dia investindo <span className="kw">no escuro</span>
+          <h2
+            className="display text-white text-4xl md:text-6xl lg:text-[72px]"
+            style={{ lineHeight: 0.96, letterSpacing: "-0.04em" }}
+          >
+            Seu concorrente já está{" "}
+            <span className="grad-text">usando IA.</span>
+            <br />
+            E você?
           </h2>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={0.2}>
-          <p className="mt-8 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Com custo de mídia 12% mais caro e concorrência acelerada, a diferença entre crescer e desperdiçar está nos fundamentos.
+        <RevealOnScroll delay={0.18}>
+          <p
+            className="mt-8 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
+            style={{ color: "var(--text-muted)" }}
+          >
+            Enquanto você ainda paga caro por produção tradicional, quem usa IA já está veiculando mais anúncios, testando mais criativos e convertendo mais.
           </p>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={0.3}>
-          <div className="mt-12 flex justify-center">
+        <RevealOnScroll delay={0.26}>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <GlowButton size="lg">
-              Solicitar Meu Diagnóstico
-              <span className="ml-1">→</span>
+              Quero meu vídeo agora →
             </GlowButton>
           </div>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={0.4}>
-          <ul className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-white/55">
-            {["Entrega em até 5 dias úteis", "100% confidencial", "Plano de ação claro"].map((s) => (
+        <RevealOnScroll delay={0.34}>
+          <ul
+            className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm"
+            style={{ color: "var(--text-muted)" }}
+          >
+            {[
+              "Briefing em 5 minutos",
+              "Entrega em até 48h",
+              "Satisfação garantida",
+            ].map((s) => (
               <li key={s} className="flex items-center gap-2">
-                <CheckIcon /> {s}
+                <CheckIcon />
+                {s}
               </li>
             ))}
           </ul>
@@ -54,7 +84,7 @@ export default function FinalCTA() {
 
 function CheckIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8740C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ stroke: "var(--accent-2)", flexShrink: 0 }}>
       <path d="M20 6L9 17l-5-5" />
     </svg>
   );

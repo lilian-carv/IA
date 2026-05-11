@@ -30,3 +30,4 @@ components/
 ```
 
 Todos os CTAs apontam para o WhatsApp comercial.
+# IA

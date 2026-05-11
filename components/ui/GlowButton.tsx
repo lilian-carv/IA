@@ -2,18 +2,30 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
-const WHATSAPP =
-  "https://api.whatsapp.com/send?phone=558581486404&text=Olá! Tenho interesse no Diagnóstico de Escala Digital.";
+const WA = "https://api.whatsapp.com/send?phone=558581486404&text=Ol%C3%A1!%20Tenho%20interesse%20em%20v%C3%ADdeos%20com%20IA%20da%20Numeratti.";
 
 type Props = {
   children: ReactNode;
   href?: string;
   className?: string;
-  size?: "md" | "lg";
+  size?: "sm" | "md" | "lg";
+  variant?: "primary" | "ghost";
 };
 
-export default function GlowButton({ children, href = WHATSAPP, className = "", size = "md" }: Props) {
-  const sizing = size === "lg" ? "px-10 py-5 text-base" : "px-8 py-4 text-sm";
+export default function GlowButton({
+  children,
+  href = WA,
+  className = "",
+  size = "md",
+  variant = "primary",
+}: Props) {
+  const sizing =
+    size === "lg" ? "px-10 py-5 text-base" :
+    size === "sm" ? "px-5 py-2.5 text-sm" :
+    "px-7 py-4 text-sm";
+
+  const base = variant === "ghost" ? "ghost-btn" : "glow-btn";
+
   return (
     <motion.a
       href={href}
@@ -21,8 +33,8 @@ export default function GlowButton({ children, href = WHATSAPP, className = "", 
       rel="noopener noreferrer"
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.97 }}
-      transition={{ type: "spring", stiffness: 320, damping: 20 }}
-      className={`glow-btn ${sizing} ${className}`}
+      transition={{ type: "spring", stiffness: 340, damping: 22 }}
+      className={`${base} ${sizing} ${className}`}
     >
       <span className="relative z-10 font-semibold tracking-wide">{children}</span>
     </motion.a>

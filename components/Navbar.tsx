@@ -3,19 +3,19 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import GlowButton from "./ui/GlowButton";
 import Logo from "./ui/Logo";
 
+const links = [
+  { label: "O que é", href: "#o-que-e" },
+  { label: "Para quem", href: "#para-quem" },
+  { label: "Como funciona", href: "#como-funciona" },
+  { label: "Preços", href: "#precos" },
+  { label: "FAQ", href: "#faq" },
+];
+
 export default function Navbar() {
   const { scrollY } = useScroll();
-  const bg = useTransform(
-    scrollY,
-    [0, 80],
-    ["rgba(10,10,10,0)", "rgba(10,10,10,0.7)"]
-  );
-  const blur = useTransform(scrollY, [0, 80], ["blur(0px)", "blur(14px)"]);
-  const border = useTransform(
-    scrollY,
-    [0, 80],
-    ["rgba(255,255,255,0)", "rgba(255,255,255,0.08)"]
-  );
+  const bg = useTransform(scrollY, [0, 80], ["rgba(4,4,6,0)", "rgba(4,4,6,0.88)"]);
+  const blur = useTransform(scrollY, [0, 80], ["blur(0px)", "blur(18px)"]);
+  const border = useTransform(scrollY, [0, 80], ["rgba(255,255,255,0)", "rgba(255,255,255,0.07)"]);
 
   return (
     <motion.header
@@ -23,24 +23,23 @@ export default function Navbar() {
       className="fixed top-0 inset-x-0 z-50 border-b"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 group">
-          <Logo size={36} />
-          <div className="hidden sm:block leading-tight pl-2 border-l border-white/15">
-            <div className="text-[10px] uppercase tracking-[0.22em] text-orange-primary font-semibold">
-              Diagnóstico de Escala
-            </div>
-          </div>
+        <a href="#" className="flex items-center" aria-label="Numeratti">
+          <Logo size={34} />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-8 text-sm text-white/70">
-          <a href="#problema" className="hover:text-white transition">Problema</a>
-          <a href="#solucao" className="hover:text-white transition">Solução</a>
-          <a href="#metodologia" className="hover:text-white transition">Metodologia</a>
-          <a href="#entregavel" className="hover:text-white transition">Entregável</a>
-          <a href="#sobre" className="hover:text-white transition">Sobre</a>
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium" style={{ color: "var(--text-muted)" }}>
+          {links.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              className="transition-colors duration-200 hover:text-white"
+            >
+              {label}
+            </a>
+          ))}
         </nav>
 
-        <GlowButton size="md">Solicitar Diagnóstico</GlowButton>
+        <GlowButton size="sm">Quero meu vídeo →</GlowButton>
       </div>
     </motion.header>
   );

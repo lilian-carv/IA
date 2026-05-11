@@ -1,29 +1,33 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import StatsBar from "@/components/StatsBar";
-import ProblemSection from "@/components/ProblemSection";
-import PillarSection from "@/components/PillarSection";
-import MethodologyFlowchart from "@/components/MethodologyFlowchart";
-import DeliverableSection from "@/components/DeliverableSection";
-import GestoresSection from "@/components/GestoresSection";
-import AboutSection from "@/components/AboutSection";
+import LogosBar from "@/components/LogosBar";
+import WhatIsSection from "@/components/WhatIsSection";
+import ForWhomSection from "@/components/ForWhomSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import ExamplesSection from "@/components/ExamplesSection";
+import ComparisonSection from "@/components/ComparisonSection";
+import PricingSection from "@/components/PricingSection";
+import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Page() {
   return (
-    <main className="relative">
+    <main>
       <Navbar />
       <Hero />
-      <StatsBar />
-      <ProblemSection />
-      <PillarSection />
-      <MethodologyFlowchart />
-      <DeliverableSection />
-      <GestoresSection />
-      <AboutSection />
+      <LogosBar />
+      <WhatIsSection />
+      <ForWhomSection />
+      <HowItWorksSection />
+      <ExamplesSection />
+      <ComparisonSection />
+      <PricingSection />
+      <FAQSection />
       <FinalCTA />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

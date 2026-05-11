@@ -5,35 +5,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        orange: {
-          primary: "#E8740C",
-          light: "#FEF0E3",
-          mid: "#D4680A",
+        accent: {
+          DEFAULT: "#7C5CFC",
+          2: "#22D3EE",
         },
-        cream: {
-          DEFAULT: "#FDF8F3",
-          dark: "#fcebd8",
+        surface: {
+          DEFAULT: "#0C0C10",
+          2: "#131318",
         },
         ink: {
           DEFAULT: "#111111",
-          bg: "#0A0A0A",
-          warm: "#0f0a05",
-          mid: "#1a0f05",
-          accent: "#2a1508",
-          edge: "#3d1e07",
+          bg: "#040406",
         },
-        warning: "#F59E0B",
-        critical: "#EF4444",
       },
       fontFamily: {
-        display: ["var(--font-display)", "sans-serif"],
+        display: ["var(--font-body)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
       },
       backgroundImage: {
-        "premium-dark":
-          "linear-gradient(135deg, #0A0A0A 0%, #0f0a05 35%, #1a0f05 60%, #2a1508 85%, #3d1e07 100%)",
-        "orange-gradient":
-          "linear-gradient(135deg, #E8740C 0%, #D4680A 100%)",
+        "grad-accent": "linear-gradient(135deg, #7C5CFC 0%, #22D3EE 100%)",
+        "dark-base": "radial-gradient(ellipse at 60% 0%, #0D0B1A 0%, #040406 60%)",
       },
     },
   },

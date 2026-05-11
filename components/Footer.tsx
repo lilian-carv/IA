@@ -1,35 +1,52 @@
 import { currentYear } from "@/lib/year";
 import Logo from "./ui/Logo";
 
+const navLinks = [
+  { label: "O que é", href: "#o-que-e" },
+  { label: "Para quem", href: "#para-quem" },
+  { label: "Como funciona", href: "#como-funciona" },
+  { label: "Preços", href: "#precos" },
+  { label: "FAQ", href: "#faq" },
+];
+
 export default function Footer() {
   return (
-    <footer className="relative bg-ink-bg text-white/60 border-t border-white/[0.06]">
+    <footer
+      className="relative border-t"
+      style={{ background: "var(--surface)", borderColor: "var(--border)", color: "var(--text-muted)" }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
-        <div className="grid md:grid-cols-12 gap-8 items-start">
+        <div className="grid md:grid-cols-12 gap-10 items-start">
           <div className="md:col-span-5">
-            <div className="flex items-center">
-              <Logo size={44} />
-            </div>
-            <p className="mt-5 text-white/55 max-w-sm leading-relaxed">
-              Estratégia, Dados e Resultados Sustentáveis. Consultoria de performance digital com base em Fortaleza/CE.
+            <Logo size={38} />
+            <p className="mt-5 text-sm leading-relaxed max-w-xs" style={{ color: "var(--text-muted)" }}>
+              Vídeos profissionais produzidos com Inteligência Artificial. Entregamos em até 48h, prontos para anúncios, redes sociais e landing pages.
             </p>
           </div>
 
           <div className="md:col-span-3">
-            <div className="text-white/40 text-[10px] uppercase tracking-[0.22em] font-bold mb-4">
+            <div
+              className="text-[10px] uppercase tracking-[0.22em] font-bold mb-4"
+              style={{ color: "var(--text-dim)" }}
+            >
               Navegue
             </div>
             <ul className="space-y-2 text-sm">
-              <li><a href="#problema" className="hover:text-white transition">Problema</a></li>
-              <li><a href="#solucao" className="hover:text-white transition">Solução</a></li>
-              <li><a href="#metodologia" className="hover:text-white transition">Metodologia</a></li>
-              <li><a href="#entregavel" className="hover:text-white transition">Entregável</a></li>
-              <li><a href="#sobre" className="hover:text-white transition">Sobre</a></li>
+              {navLinks.map(({ label, href }) => (
+                <li key={href}>
+                  <a href={href} className="hover:text-white transition-colors duration-200">
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="md:col-span-4">
-            <div className="text-white/40 text-[10px] uppercase tracking-[0.22em] font-bold mb-4">
+            <div
+              className="text-[10px] uppercase tracking-[0.22em] font-bold mb-4"
+              style={{ color: "var(--text-dim)" }}
+            >
               Contato
             </div>
             <ul className="space-y-2 text-sm">
@@ -38,7 +55,7 @@ export default function Footer() {
                   href="https://api.whatsapp.com/send?phone=558581486404"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition-colors duration-200"
                 >
                   WhatsApp: (85) 8148-6404
                 </a>
@@ -49,9 +66,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/[0.05] flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
-          <span>© {currentYear()} Numeratti — Inteligência Digital para Decisões de Mídia.</span>
-          <span>Diagnóstico de Escala Digital · Todos os direitos reservados.</span>
+        <div
+          className="mt-12 pt-6 flex flex-wrap items-center justify-between gap-3 text-xs border-t"
+          style={{ borderColor: "var(--border)", color: "var(--text-dim)" }}
+        >
+          <span>© {currentYear()} Numeratti — Vídeos com IA. Todos os direitos reservados.</span>
+          <span>
+            <a href="#" className="hover:text-white transition-colors duration-200">Política de Privacidade</a>
+            {" · "}
+            <a href="#" className="hover:text-white transition-colors duration-200">Termos de Uso</a>
+          </span>
         </div>
       </div>
     </footer>
