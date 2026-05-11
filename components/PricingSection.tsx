@@ -81,10 +81,10 @@ export default function PricingSection() {
                 style={{
                   background: plan.highlight ? "var(--surface-2)" : "var(--bg)",
                   border: plan.highlight
-                    ? "1px solid rgba(124,92,252,0.5)"
+                    ? "1px solid rgba(59,130,246,0.5)"
                     : "1px solid var(--border)",
                   boxShadow: plan.highlight
-                    ? "0 0 50px rgba(124,92,252,0.15)"
+                    ? "0 0 50px rgba(59,130,246,0.15)"
                     : "none",
                 }}
               >

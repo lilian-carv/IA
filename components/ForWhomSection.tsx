@@ -5,42 +5,42 @@ import RevealOnScroll from "./ui/RevealOnScroll";
 const personas = [
   {
     icon: <ChartIcon />,
-    iconBg: "linear-gradient(135deg, #7C5CFC, #5B3FD9)",
+    iconBg: "rgba(59,130,246,0.15)",
     title: "Gestores de tráfego",
     desc: "Crie criativos para anúncios no Meta e Google sem depender de equipe de vídeo. Teste mais variações, mais rápido.",
     tags: ["Meta Ads", "Google Ads", "Criativos em escala"],
   },
   {
     icon: <BagIcon />,
-    iconBg: "linear-gradient(135deg, #0EA5E9, #0284C7)",
+    iconBg: "rgba(59,130,246,0.15)",
     title: "Donos de e-commerce",
     desc: "Vídeos de produto, depoimentos e demonstrações que aumentam a conversão — sem sessão de fotos ou estúdio.",
     tags: ["Produto", "Conversão", "Stories"],
   },
   {
     icon: <PlayIcon />,
-    iconBg: "linear-gradient(135deg, #22D3EE, #0891B2)",
+    iconBg: "rgba(59,130,246,0.15)",
     title: "Infoprodutores",
     desc: "Apresente seu curso ou mentoria com vídeos profissionais que geram autoridade e vendem sem você aparecer.",
     tags: ["Lançamento", "Autoridade", "Funil"],
   },
   {
     icon: <BriefcaseIcon />,
-    iconBg: "linear-gradient(135deg, #10B981, #059669)",
+    iconBg: "rgba(59,130,246,0.15)",
     title: "Prestadores de serviços",
     desc: "Mostre o resultado do seu trabalho, explique seus diferenciais e feche mais clientes com vídeo.",
     tags: ["Portfólio", "Depoimentos", "Prospecção"],
   },
   {
     icon: <PinIcon />,
-    iconBg: "linear-gradient(135deg, #F59E0B, #D97706)",
+    iconBg: "rgba(59,130,246,0.15)",
     title: "Negócios locais",
     desc: "Restaurantes, clínicas, academias e lojas que precisam de presença digital forte mas sem orçamento de produção.",
     tags: ["Reels", "Local", "Promoção"],
   },
   {
     icon: <RocketIcon />,
-    iconBg: "linear-gradient(135deg, #EC4899, #BE185D)",
+    iconBg: "rgba(59,130,246,0.15)",
     title: "Agências de marketing",
     desc: "Escale a produção de vídeo para seus clientes com custo e prazo previsíveis. White-label disponível.",
     tags: ["White-label", "Escala", "Múltiplos clientes"],
@@ -92,9 +92,9 @@ export default function ForWhomSection() {
                       key={t}
                       className="px-3 py-1 rounded-full text-[11px] font-medium"
                       style={{
-                        background: "rgba(124,92,252,0.08)",
+                        background: "rgba(59,130,246,0.08)",
                         color: "var(--accent)",
-                        border: "1px solid rgba(124,92,252,0.2)",
+                        border: "1px solid rgba(59,130,246,0.2)",
                       }}
                     >
                       {t}

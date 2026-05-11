@@ -31,12 +31,12 @@ export default function Hero() {
       {/* Glow orbs */}
       <div
         className="orb w-[700px] h-[700px] -top-60 -right-60"
-        style={{ background: "radial-gradient(circle, rgba(124,92,252,0.22), transparent 60%)" }}
+        style={{ background: "radial-gradient(circle, rgba(59,130,246,0.22), transparent 60%)" }}
         aria-hidden
       />
       <div
         className="orb w-[500px] h-[500px] bottom-[-200px] -left-40"
-        style={{ background: "radial-gradient(circle, rgba(34,211,238,0.12), transparent 60%)" }}
+        style={{ background: "radial-gradient(circle, rgba(59,130,246,0.12), transparent 60%)" }}
         aria-hidden
       />
 
@@ -147,7 +147,7 @@ function VideoFrame() {
       {/* Wide ambient glow behind */}
       <div
         className="absolute -inset-6 rounded-3xl blur-3xl"
-        style={{ background: "linear-gradient(135deg, rgba(124,92,252,0.4), rgba(34,211,238,0.25))", zIndex: 0 }}
+        style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.4), rgba(59,130,246,0.25))", zIndex: 0 }}
         aria-hidden
       />
 
@@ -155,7 +155,7 @@ function VideoFrame() {
       <div
         className="absolute -inset-[3px] rounded-[20px]"
         style={{
-          background: "linear-gradient(135deg, rgba(124,92,252,0.7), rgba(34,211,238,0.5))",
+          background: "linear-gradient(135deg, rgba(59,130,246,0.7), rgba(59,130,246,0.5))",
           animation: "video-ring-pulse 3s ease-in-out infinite",
           zIndex: 0,
         }}
@@ -173,7 +173,7 @@ function VideoFrame() {
         {/* Label bar */}
         <div
           className="flex items-center justify-between px-4 py-2.5"
-          style={{ background: "rgba(124,92,252,0.12)", borderBottom: "1px solid rgba(124,92,252,0.25)" }}
+          style={{ background: "rgba(59,130,246,0.12)", borderBottom: "1px solid rgba(59,130,246,0.25)" }}
         >
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--accent-2)" }} />
@@ -184,16 +184,17 @@ function VideoFrame() {
           <span className="text-[10px]" style={{ color: "var(--text-dim)" }}>Numeratti</span>
         </div>
 
-        {/* Video — 16:9 */}
-        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-          <iframe
-            src="https://drive.google.com/file/d/1VCqXFV1X0GL7hJBYB0mdXQkmu0rTSvA2/preview"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="Vídeo demo Numeratti IA"
-            className="absolute inset-0 w-full h-full"
-            style={{ border: "none" }}
-          />
+        {/* Video — 16:9 with Drive footer cropped */}
+        <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+          <div className="absolute overflow-hidden" style={{ top: 0, left: 0, right: 0, bottom: -52 }}>
+            <iframe
+              src="https://drive.google.com/file/d/1VCqXFV1X0GL7hJBYB0mdXQkmu0rTSvA2/preview"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Vídeo demo Numeratti IA"
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "calc(100% + 52px)", border: "none" }}
+            />
+          </div>
         </div>
       </div>
 
@@ -204,7 +205,7 @@ function VideoFrame() {
         className="absolute -bottom-4 -left-4 px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2 shadow-xl z-10"
         style={{
           background: "var(--surface-2)",
-          border: "1px solid rgba(124,92,252,0.35)",
+          border: "1px solid rgba(59,130,246,0.35)",
           color: "var(--text)",
           backdropFilter: "blur(12px)",
         }}
@@ -218,8 +219,8 @@ function VideoFrame() {
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
         className="absolute -top-4 -right-4 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-xl z-10"
         style={{
-          background: "rgba(34,211,238,0.12)",
-          border: "1px solid rgba(34,211,238,0.3)",
+          background: "rgba(59,130,246,0.12)",
+          border: "1px solid rgba(59,130,246,0.3)",
           color: "var(--accent-2)",
           backdropFilter: "blur(12px)",
         }}

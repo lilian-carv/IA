@@ -18,7 +18,7 @@ export default function FinalCTA() {
         className="orb w-[800px] h-[800px] left-1/2 top-1/2"
         style={{
           transform: "translate(-50%, -50%)",
-          background: "radial-gradient(circle, rgba(124,92,252,0.18), rgba(34,211,238,0.08) 50%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(59,130,246,0.18), rgba(59,130,246,0.08) 50%, transparent 70%)",
         }}
         aria-hidden
       />
