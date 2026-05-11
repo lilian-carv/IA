@@ -167,35 +167,22 @@ function VideoFrame() {
       <div
         className="relative rounded-[18px] overflow-hidden"
         style={{
-          background: "var(--surface)",
+          background: "#000",
           zIndex: 1,
         }}
       >
-        {/* Label bar */}
-        <div
-          className="flex items-center justify-between px-4 py-2.5"
-          style={{ background: "rgba(129,140,248,0.12)", borderBottom: "1px solid rgba(129,140,248,0.25)" }}
-        >
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--accent-2)" }} />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.12em]" style={{ color: "var(--accent-2)" }}>
-              Vídeo produzido com IA
-            </span>
-          </div>
-          <span className="text-[10px]" style={{ color: "var(--text-dim)" }}>Numeratti</span>
-        </div>
-
-        {/* Video — 16:9 with Drive footer cropped */}
-        <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
-          <div className="absolute overflow-hidden" style={{ top: 0, left: 0, right: 0, bottom: -52 }}>
-            <iframe
-              src="https://drive.google.com/file/d/1VCqXFV1X0GL7hJBYB0mdXQkmu0rTSvA2/preview"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title="Vídeo demo Numeratti IA"
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "calc(100% + 52px)", border: "none" }}
-            />
-          </div>
+        {/* Video — 16:9, plays automatically, looped, no controls */}
+        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+          <video
+            src="/hero-video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-label="Vídeo demo Numeratti IA"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         </div>
       </div>
 

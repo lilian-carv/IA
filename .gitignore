@@ -8,3 +8,4 @@ next-env.d.ts
 .claude/
 public/video-demo.mp4
 public/*.mp4
+!public/hero-video.mp4
