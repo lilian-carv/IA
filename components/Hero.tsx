@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import GlowButton from "./ui/GlowButton";
 import Particles from "./ui/Particles";
 
@@ -143,6 +143,16 @@ export default function Hero() {
 }
 
 function VideoFrame() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
+
+  const toggleSound = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setMuted(v.muted);
+  };
+
   return (
     <div className="relative">
       {/* Wide ambient glow behind */}
@@ -173,6 +183,7 @@ function VideoFrame() {
       >
         {/* Video — 16:9, plays automatically, looped, no controls */}
         <video
+          ref={videoRef}
           src="/hero-video.mp4?v=2"
           autoPlay
           muted
@@ -182,9 +193,26 @@ function VideoFrame() {
           controls={false}
           disablePictureInPicture
           aria-label="Vídeo demo Numeratti IA"
-          className="block w-full h-auto"
+          className="block w-full h-auto cursor-pointer"
           style={{ aspectRatio: "16 / 9" }}
+          onClick={toggleSound}
         />
+
+        {/* Sound toggle */}
+        <button
+          type="button"
+          onClick={toggleSound}
+          aria-label={muted ? "Ativar som" : "Desativar som"}
+          className="absolute bottom-3 right-3 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
+          style={{
+            background: "rgba(0,0,0,0.55)",
+            border: "1px solid rgba(255,255,255,0.15)",
+            backdropFilter: "blur(8px)",
+            zIndex: 2,
+          }}
+        >
+          {muted ? <MutedIcon /> : <SoundIcon />}
+        </button>
       </div>
 
       {/* Floating badges */}
@@ -225,6 +253,26 @@ function CheckIcon() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ stroke: "var(--accent-2)", flexShrink: 0 }}>
       <path d="M20 6L9 17l-5-5" />
+    </svg>
+  );
+}
+
+function MutedIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="white" />
+      <line x1="23" y1="9" x2="17" y2="15" />
+      <line x1="17" y1="9" x2="23" y2="15" />
+    </svg>
+  );
+}
+
+function SoundIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="white" />
+      <path d="M15.54 8.46a5 5 0 010 7.07" />
+      <path d="M19.07 4.93a10 10 0 010 14.14" />
     </svg>
   );
 }
