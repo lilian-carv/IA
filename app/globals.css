@@ -193,3 +193,23 @@ html, body {
   outline-offset: 3px;
   border-radius: 6px;
 }
+
+/* Logos marquee */
+@keyframes logos-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes logos-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+.logos-marquee-left  { animation: logos-left  38s linear infinite; }
+.logos-marquee-right { animation: logos-right 42s linear infinite; }
+.logos-marquee-left:hover,
+.logos-marquee-right:hover { animation-play-state: paused; }
+
+/* Hero video pulsing ring */
+@keyframes video-ring-pulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(124,92,252,0.25), 0 0 80px rgba(34,211,238,0.1); }
+  50%       { box-shadow: 0 0 60px rgba(124,92,252,0.45), 0 0 120px rgba(34,211,238,0.2); }
+}

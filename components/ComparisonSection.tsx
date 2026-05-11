@@ -7,7 +7,6 @@ const rows = [
   { label: "Equipe necessária",  before: "Diretor, câmera, ator",    after: "Só você e um briefing" },
   { label: "Revisões",           before: "Cara e demorada",           after: "Inclusa no plano" },
   { label: "Escala",             before: "1 vídeo por vez",           after: "Múltiplos em paralelo" },
-  { label: "Disponibilidade",    before: "Dias úteis, horário comercial", after: "Peça a qualquer hora" },
 ];
 
 export default function ComparisonSection() {

@@ -131,7 +131,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="lg:col-span-6 xl:col-span-5 relative"
+            className="lg:col-span-6 relative"
           >
             <VideoFrame />
           </motion.div>
@@ -144,38 +144,47 @@ export default function Hero() {
 function VideoFrame() {
   return (
     <div className="relative">
-      {/* Glow behind the video */}
+      {/* Wide ambient glow behind */}
       <div
-        className="absolute inset-0 rounded-2xl blur-2xl scale-95"
-        style={{ background: "linear-gradient(135deg, rgba(124,92,252,0.35), rgba(34,211,238,0.2))" }}
+        className="absolute -inset-6 rounded-3xl blur-3xl"
+        style={{ background: "linear-gradient(135deg, rgba(124,92,252,0.4), rgba(34,211,238,0.25))", zIndex: 0 }}
         aria-hidden
       />
+
+      {/* Outer pulsing ring */}
+      <div
+        className="absolute -inset-[3px] rounded-[20px]"
+        style={{
+          background: "linear-gradient(135deg, rgba(124,92,252,0.7), rgba(34,211,238,0.5))",
+          animation: "video-ring-pulse 3s ease-in-out infinite",
+          zIndex: 0,
+        }}
+        aria-hidden
+      />
+
       {/* Frame */}
       <div
-        className="relative rounded-2xl overflow-hidden"
+        className="relative rounded-[18px] overflow-hidden"
         style={{
-          border: "1px solid rgba(124,92,252,0.3)",
           background: "var(--surface)",
-          boxShadow: "0 0 60px rgba(124,92,252,0.2), inset 0 1px 0 rgba(255,255,255,0.06)",
+          zIndex: 1,
         }}
       >
-        {/* Fake browser bar */}
+        {/* Label bar */}
         <div
-          className="flex items-center gap-1.5 px-4 py-3"
-          style={{ background: "var(--surface-2)", borderBottom: "1px solid var(--border)" }}
+          className="flex items-center justify-between px-4 py-2.5"
+          style={{ background: "rgba(124,92,252,0.12)", borderBottom: "1px solid rgba(124,92,252,0.25)" }}
         >
-          {["#EF4444", "#F59E0B", "#22C55E"].map((c) => (
-            <span key={c} className="w-2.5 h-2.5 rounded-full" style={{ background: c }} />
-          ))}
-          <div
-            className="ml-3 flex-1 rounded px-3 py-1 text-[11px] text-center"
-            style={{ background: "var(--bg)", color: "var(--text-dim)" }}
-          >
-            numeratti.com.br · vídeo demo
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--accent-2)" }} />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.12em]" style={{ color: "var(--accent-2)" }}>
+              Vídeo produzido com IA
+            </span>
           </div>
+          <span className="text-[10px]" style={{ color: "var(--text-dim)" }}>Numeratti</span>
         </div>
 
-        {/* Video */}
+        {/* Video — 16:9 */}
         <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
           <iframe
             src="https://drive.google.com/file/d/1VCqXFV1X0GL7hJBYB0mdXQkmu0rTSvA2/preview"
@@ -188,19 +197,35 @@ function VideoFrame() {
         </div>
       </div>
 
-      {/* Floating badge */}
+      {/* Floating badges */}
       <motion.div
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-5 -left-5 px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2 shadow-xl"
+        animate={{ y: [0, -7, 0] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -bottom-4 -left-4 px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2 shadow-xl z-10"
         style={{
           background: "var(--surface-2)",
-          border: "1px solid var(--border-hover)",
+          border: "1px solid rgba(124,92,252,0.35)",
           color: "var(--text)",
+          backdropFilter: "blur(12px)",
         }}
       >
         <span className="text-base">⚡</span>
         Entrega ágil
+      </motion.div>
+
+      <motion.div
+        animate={{ y: [0, 7, 0] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+        className="absolute -top-4 -right-4 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-xl z-10"
+        style={{
+          background: "rgba(34,211,238,0.12)",
+          border: "1px solid rgba(34,211,238,0.3)",
+          color: "var(--accent-2)",
+          backdropFilter: "blur(12px)",
+        }}
+      >
+        <span>✦</span>
+        100% IA
       </motion.div>
     </div>
   );
