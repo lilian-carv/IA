@@ -172,18 +172,19 @@ function VideoFrame() {
         }}
       >
         {/* Video — 16:9, plays automatically, looped, no controls */}
-        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-          <video
-            src="/hero-video.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            aria-label="Vídeo demo Numeratti IA"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
+        <video
+          src="/hero-video.mp4?v=2"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          controls={false}
+          disablePictureInPicture
+          aria-label="Vídeo demo Numeratti IA"
+          className="block w-full h-auto"
+          style={{ aspectRatio: "16 / 9" }}
+        />
       </div>
 
       {/* Floating badges */}
