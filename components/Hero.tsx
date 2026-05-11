@@ -31,12 +31,12 @@ export default function Hero() {
       {/* Glow orbs */}
       <div
         className="orb w-[700px] h-[700px] -top-60 -right-60"
-        style={{ background: "radial-gradient(circle, rgba(59,130,246,0.22), transparent 60%)" }}
+        style={{ background: "radial-gradient(circle, rgba(129,140,248,0.22), transparent 60%)" }}
         aria-hidden
       />
       <div
         className="orb w-[500px] h-[500px] bottom-[-200px] -left-40"
-        style={{ background: "radial-gradient(circle, rgba(59,130,246,0.12), transparent 60%)" }}
+        style={{ background: "radial-gradient(circle, rgba(129,140,248,0.12), transparent 60%)" }}
         aria-hidden
       />
 
@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
           {/* Left column — copy */}
-          <div className="lg:col-span-6 xl:col-span-7">
+          <div className="lg:col-span-6">
             <motion.div
               custom={0}
               variants={fadeUp}
@@ -64,14 +64,15 @@ export default function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              className="display text-white text-[42px] sm:text-6xl lg:text-[64px] xl:text-[76px]"
-              style={{ lineHeight: 0.96, letterSpacing: "-0.04em" }}
+              className="display text-white text-[40px] sm:text-5xl lg:text-[54px] xl:text-[62px]"
+              style={{ lineHeight: 1.02, letterSpacing: "-0.035em" }}
             >
               Vídeos que{" "}
-              <span className="grad-text">vendem.</span>
+              <span style={{ color: "var(--accent)" }}>vendem.</span>
               <br />
-              Prontos em{" "}
-              <span style={{ color: "var(--accent-2)" }}>dias, não semanas.</span>
+              Prontos em dias,
+              <br className="hidden sm:block" />
+              {" "}não semanas.
             </motion.h1>
 
             <motion.p
@@ -147,7 +148,7 @@ function VideoFrame() {
       {/* Wide ambient glow behind */}
       <div
         className="absolute -inset-6 rounded-3xl blur-3xl"
-        style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.4), rgba(59,130,246,0.25))", zIndex: 0 }}
+        style={{ background: "linear-gradient(135deg, rgba(129,140,248,0.4), rgba(129,140,248,0.25))", zIndex: 0 }}
         aria-hidden
       />
 
@@ -155,7 +156,7 @@ function VideoFrame() {
       <div
         className="absolute -inset-[3px] rounded-[20px]"
         style={{
-          background: "linear-gradient(135deg, rgba(59,130,246,0.7), rgba(59,130,246,0.5))",
+          background: "linear-gradient(135deg, rgba(129,140,248,0.7), rgba(129,140,248,0.5))",
           animation: "video-ring-pulse 3s ease-in-out infinite",
           zIndex: 0,
         }}
@@ -173,7 +174,7 @@ function VideoFrame() {
         {/* Label bar */}
         <div
           className="flex items-center justify-between px-4 py-2.5"
-          style={{ background: "rgba(59,130,246,0.12)", borderBottom: "1px solid rgba(59,130,246,0.25)" }}
+          style={{ background: "rgba(129,140,248,0.12)", borderBottom: "1px solid rgba(129,140,248,0.25)" }}
         >
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--accent-2)" }} />
@@ -205,7 +206,7 @@ function VideoFrame() {
         className="absolute -bottom-4 -left-4 px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2 shadow-xl z-10"
         style={{
           background: "var(--surface-2)",
-          border: "1px solid rgba(59,130,246,0.35)",
+          border: "1px solid rgba(129,140,248,0.35)",
           color: "var(--text)",
           backdropFilter: "blur(12px)",
         }}
@@ -219,8 +220,8 @@ function VideoFrame() {
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
         className="absolute -top-4 -right-4 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-xl z-10"
         style={{
-          background: "rgba(59,130,246,0.12)",
-          border: "1px solid rgba(59,130,246,0.3)",
+          background: "rgba(129,140,248,0.12)",
+          border: "1px solid rgba(129,140,248,0.3)",
           color: "var(--accent-2)",
           backdropFilter: "blur(12px)",
         }}

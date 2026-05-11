@@ -4,7 +4,7 @@ import RevealOnScroll from "./ui/RevealOnScroll";
 const cases = [
   {
     icon: <CartIcon />,
-    iconBg: "rgba(59,130,246,0.15)",
+    iconBg: "rgba(129,140,248,0.15)",
     category: "Anúncio de produto",
     title: "E-commerce de moda",
     desc: "Vídeo de 30s com apresentação de produto, narração e call-to-action. Taxa de clique 2,4× maior que foto estática.",
@@ -12,7 +12,7 @@ const cases = [
   },
   {
     icon: <DumbbellIcon />,
-    iconBg: "rgba(59,130,246,0.15)",
+    iconBg: "rgba(129,140,248,0.15)",
     category: "Vídeo institucional",
     title: "Academia local",
     desc: "Apresentação da estrutura, diferenciais e oferta de matrícula. Usado em anúncio de Instagram e na landing page.",
@@ -20,7 +20,7 @@ const cases = [
   },
   {
     icon: <MonitorIcon />,
-    iconBg: "rgba(59,130,246,0.15)",
+    iconBg: "rgba(129,140,248,0.15)",
     category: "Lançamento de infoproduto",
     title: "Curso online",
     desc: "Vídeo de VSL de 60s com avatar IA apresentando o curso, depoimentos e bônus. Converteu 9,3% na landing page.",
@@ -28,7 +28,7 @@ const cases = [
   },
   {
     icon: <UtensilsIcon />,
-    iconBg: "rgba(59,130,246,0.15)",
+    iconBg: "rgba(129,140,248,0.15)",
     category: "Promoção de negócio local",
     title: "Restaurante",
     desc: "Reels de 15s com imagens do cardápio, animação e oferta de fim de semana. Atingiu 40 mil views orgânicos.",
@@ -36,7 +36,7 @@ const cases = [
   },
   {
     icon: <BuildingIcon />,
-    iconBg: "rgba(59,130,246,0.15)",
+    iconBg: "rgba(129,140,248,0.15)",
     category: "Prestação de serviço",
     title: "Imobiliária",
     desc: "Vídeo de apresentação de imóvel com narração profissional e tour animado. Reduziu custo de produção em 80%.",
@@ -44,7 +44,7 @@ const cases = [
   },
   {
     icon: <LayersIcon />,
-    iconBg: "rgba(59,130,246,0.15)",
+    iconBg: "rgba(129,140,248,0.15)",
     category: "Agência de marketing",
     title: "Múltiplos clientes",
     desc: "Agência que usa a Numeratti para produzir vídeos de 6 clientes por mês com custo 5× menor que produtora tradicional.",
@@ -87,9 +87,9 @@ export default function ExamplesSection() {
                   <span
                     className="px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider"
                     style={{
-                      background: "rgba(59,130,246,0.1)",
+                      background: "rgba(129,140,248,0.1)",
                       color: "var(--accent)",
-                      border: "1px solid rgba(59,130,246,0.2)",
+                      border: "1px solid rgba(129,140,248,0.2)",
                     }}
                   >
                     {c.badge}

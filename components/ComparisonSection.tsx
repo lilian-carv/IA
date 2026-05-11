@@ -46,7 +46,7 @@ export default function ComparisonSection() {
               </div>
               <div
                 className="text-center px-3 py-1 rounded-lg"
-                style={{ color: "var(--accent-2)", background: "rgba(59,130,246,0.08)" }}
+                style={{ color: "var(--accent-2)", background: "rgba(129,140,248,0.08)" }}
               >
                 Numeratti IA ✨
               </div>
@@ -77,9 +77,9 @@ export default function ComparisonSection() {
                     <span
                       className="px-3 py-1 rounded-full text-xs font-semibold"
                       style={{
-                        background: "rgba(59,130,246,0.12)",
+                        background: "rgba(129,140,248,0.12)",
                         color: "var(--accent)",
-                        border: "1px solid rgba(59,130,246,0.25)",
+                        border: "1px solid rgba(129,140,248,0.25)",
                       }}
                     >
                       Consulte

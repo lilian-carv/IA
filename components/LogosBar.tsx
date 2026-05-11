@@ -7,7 +7,7 @@ const tools: Tool[] = [
     name: "VEO",
     logo: (
       // Google G — official four-color mark
-      <svg viewBox="0 0 48 48" width="22" height="22">
+      <svg viewBox="0 0 48 48" width="20" height="20">
         <path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
         <path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
         <path fill="#FBBC05" d="M10.53 28.59c-.48-1.37-.76-2.84-.76-4.59s.27-3.22.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
@@ -18,84 +18,80 @@ const tools: Tool[] = [
   {
     name: "ElevenLabs",
     logo: (
-      // ElevenLabs — waveform bars (brand identity)
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <rect x="2"  y="10" width="5" height="12" rx="2.5" fill="white"/>
-        <rect x="9"  y="4"  width="5" height="24" rx="2.5" fill="white"/>
-        <rect x="16" y="8"  width="5" height="16" rx="2.5" fill="white" opacity="0.8"/>
-        <rect x="23" y="12" width="5" height="8"  rx="2.5" fill="white" opacity="0.5"/>
+      // ElevenLabs — black "II" mark (their iconic monogram)
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <rect x="8"  y="4" width="5" height="24" rx="1" fill="#000"/>
+        <rect x="19" y="4" width="5" height="24" rx="1" fill="#000"/>
       </svg>
     ),
   },
   {
     name: "Runway",
     logo: (
-      // Runway — film frame with R
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <rect x="3" y="3" width="26" height="26" rx="5" stroke="white" strokeWidth="2.5"/>
-        <path d="M10 10h7a3.5 3.5 0 010 7h-7z" fill="white"/>
-        <path d="M10 17h5l5 5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      // Runway — black square with stylized R (their app icon)
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <rect x="0" y="0" width="32" height="32" rx="7" fill="#000"/>
+        <path d="M9 9h9a4.5 4.5 0 010 9h-9z" fill="#fff"/>
+        <path d="M9 18h5l5.5 5.5" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
   {
     name: "Kling",
     logo: (
-      // Kling — K mark
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <path d="M8 5v22" stroke="white" strokeWidth="2.8" strokeLinecap="round"/>
-        <path d="M8 16L20 5" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M8 16L20 27" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
+      // Kling — bold red K (Kuaishou brand color)
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <path d="M7 4v24" stroke="#FF4D4F" strokeWidth="3.5" strokeLinecap="round"/>
+        <path d="M7 16L21 4" stroke="#FF4D4F" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M7 16L21 28" stroke="#FF4D4F" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
   {
     name: "Pika",
     logo: (
-      // Pika — lightning bolt
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <path d="M19 3L6 18h12l-5 11L25 14H13L19 3z" fill="white"/>
+      // Pika — yellow lightning bolt (their iconic mark)
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <path d="M19 2L5 18h12l-5 12L27 13H14L19 2z" fill="#FACC15"/>
       </svg>
     ),
   },
   {
     name: "HeyGen",
     logo: (
-      // HeyGen — avatar silhouette
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <circle cx="16" cy="11" r="5.5" fill="white"/>
-        <path d="M4 28c0-6.63 5.37-12 12-12s12 5.37 12 12" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+      // HeyGen — green H avatar mark
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <rect x="0" y="0" width="32" height="32" rx="8" fill="#15CC85"/>
+        <path d="M10 9v14M22 9v14M10 16h12" stroke="white" strokeWidth="3" strokeLinecap="round"/>
       </svg>
     ),
   },
   {
     name: "Sora",
     logo: (
-      // Sora / OpenAI — asterisk bloom
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <path d="M16 3v26M3 16h26M6.8 6.8l18.4 18.4M25.2 6.8L6.8 25.2" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-        <circle cx="16" cy="16" r="2.5" fill="white"/>
+      // Sora (OpenAI) — petal/bloom mark in black
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="#000">
+        <path d="M16 2c1.6 4.6 5.4 8.4 10 10-4.6 1.6-8.4 5.4-10 10-1.6-4.6-5.4-8.4-10-10 4.6-1.6 8.4-5.4 10-10z"/>
       </svg>
     ),
   },
   {
     name: "Seedance",
     logo: (
-      // Seedance — seed + wave
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <circle cx="16" cy="11" r="5.5" fill="white"/>
-        <path d="M3 22c3-4 6-4 8 0s5 4 8 0s6-4 8 0" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+      // Seedance (ByteDance) — teal seed + wave
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <ellipse cx="16" cy="10" rx="6" ry="7" fill="#14B8A6"/>
+        <path d="M3 24c3-4 6-4 8 0s5 4 8 0s6-4 8 0" stroke="#14B8A6" strokeWidth="2.8" strokeLinecap="round" fill="none"/>
       </svg>
     ),
   },
   {
     name: "Nano Banana",
     logo: (
-      // Nano Banana — banana curve
-      <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-        <path d="M9 27C7 17 9 7 16 5c9-2 13 7 10 15" stroke="white" strokeWidth="2.8" strokeLinecap="round" fill="none"/>
-        <path d="M9 27c6-2 12-5 16-12" stroke="white" strokeWidth="2.8" strokeLinecap="round" fill="none"/>
-        <circle cx="9" cy="27" r="2" fill="white"/>
+      // Nano Banana — yellow banana curve
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <path d="M8 26C6 16 9 6 17 5c10-1 13 9 9 16-3 5-10 6-18 5z" fill="#FBBF24"/>
+        <path d="M8 26C14 24 20 21 24 16" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6"/>
       </svg>
     ),
   },
@@ -107,15 +103,15 @@ const row2 = [...tools].reverse();
 function ToolChip({ tool }: { tool: Tool }) {
   return (
     <div
-      className="flex items-center gap-3 px-4 py-2.5 rounded-full select-none flex-shrink-0 transition-opacity duration-200 hover:opacity-80"
+      className="flex items-center gap-3 pl-2 pr-5 py-2 rounded-full select-none flex-shrink-0 transition-all duration-200 hover:border-white/15"
       style={{
         background: "var(--surface-2)",
         border: "1px solid var(--border)",
       }}
     >
       <span
-        className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-        style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}
+        className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm"
+        style={{ background: "#ffffff" }}
       >
         {tool.logo}
       </span>

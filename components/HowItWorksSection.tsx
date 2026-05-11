@@ -83,9 +83,9 @@ export default function HowItWorksSection() {
                   <div
                     className="inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-full"
                     style={{
-                      background: "rgba(59,130,246,0.08)",
+                      background: "rgba(129,140,248,0.08)",
                       color: "var(--accent-2)",
-                      border: "1px solid rgba(59,130,246,0.2)",
+                      border: "1px solid rgba(129,140,248,0.2)",
                     }}
                   >
                     <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--accent-2)" }} />

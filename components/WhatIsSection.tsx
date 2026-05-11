@@ -41,7 +41,7 @@ function Terminal() {
       style={{
         background: "#0A0A0E",
         border: "1px solid var(--border)",
-        boxShadow: "0 0 60px rgba(59,130,246,0.15)",
+        boxShadow: "0 0 60px rgba(129,140,248,0.15)",
       }}
     >
       {/* Terminal header */}
