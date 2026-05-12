@@ -114,7 +114,6 @@ export default function Hero() {
               style={{ color: "var(--text-muted)" }}
             >
               {[
-                "Briefing simples, sem reunião",
                 "Roteiro + vídeo inclusos",
                 "Legenda e narração IA",
               ].map((s) => (

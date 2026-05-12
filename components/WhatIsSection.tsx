@@ -106,9 +106,9 @@ export default function WhatIsSection() {
                 className="display text-white text-3xl md:text-5xl mt-4"
                 style={{ lineHeight: 1.05, letterSpacing: "-0.035em" }}
               >
-                Produção profissional de vídeo,{" "}
-                <span className="grad-text">sem equipe, sem câmera,</span>{" "}
-                sem esperar semanas.
+                Vídeos profissionais{" "}
+                <span className="grad-text">no ritmo da sua marca,</span>{" "}
+                com a agilidade da IA.
               </h2>
             </RevealOnScroll>
 
