@@ -10,15 +10,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Numeratti — Vídeos Profissionais com IA em até 48h",
+  title: "Produção de Vídeos com Inteligência Artificial para Anúncios | Numeratti",
   description:
-    "Envie seu briefing e receba um vídeo profissional produzido com Inteligência Artificial em até 48 horas. Pronto para anúncios, redes sociais e landing pages.",
+    "Produção de vídeos com Inteligência Artificial para anúncios, redes sociais e landing pages. Envie seu briefing e receba um vídeo profissional em poucos dias.",
   metadataBase: new URL("https://numeratti.com.br"),
-  keywords: ["vídeo com IA", "vídeo para anúncios", "vídeo inteligência artificial", "produção de vídeo rápida", "Numeratti"],
+  keywords: [
+    "produção de vídeos com inteligência artificial",
+    "vídeo com IA",
+    "vídeo para anúncios",
+    "criação de vídeo com IA Runway",
+    "criação de vídeo com IA Sora",
+    "criação de vídeo com IA VEO",
+    "vídeo inteligência artificial",
+    "produção de vídeo rápida",
+    "Numeratti",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Numeratti — Vídeos Profissionais com IA em até 48h",
+    title: "Produção de Vídeos com Inteligência Artificial para Anúncios | Numeratti",
     description:
-      "Envie seu briefing e receba um vídeo profissional produzido com IA em até 48 horas.",
+      "Vídeos profissionais produzidos com IA, prontos para anúncios e redes sociais em poucos dias.",
     type: "website",
     locale: "pt_BR",
   },

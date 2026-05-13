@@ -67,12 +67,10 @@ export default function Hero() {
               className="display text-white text-[40px] sm:text-5xl lg:text-[54px] xl:text-[62px]"
               style={{ lineHeight: 1.02, letterSpacing: "-0.035em" }}
             >
-              Vídeos que{" "}
-              <span style={{ color: "var(--accent)" }}>vendem.</span>
+              Produção de Vídeos com{" "}
+              <span style={{ color: "var(--accent)" }}>Inteligência Artificial</span>
               <br />
-              Prontos em dias,
-              <br className="hidden sm:block" />
-              {" "}não semanas.
+              para Anúncios que vendem.
             </motion.h1>
 
             <motion.p
