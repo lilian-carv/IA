@@ -228,20 +228,6 @@ function VideoFrame() {
         Entrega ágil
       </motion.div>
 
-      <motion.div
-        animate={{ y: [0, 7, 0] }}
-        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-        className="absolute -top-4 -right-4 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-xl z-10"
-        style={{
-          background: "rgba(129,140,248,0.12)",
-          border: "1px solid rgba(129,140,248,0.3)",
-          color: "var(--accent-2)",
-          backdropFilter: "blur(12px)",
-        }}
-      >
-        <span>✦</span>
-        100% IA
-      </motion.div>
     </div>
   );
 }
